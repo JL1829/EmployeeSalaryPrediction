@@ -9,47 +9,61 @@ Project Organization
 ├── LICENSE
 ├── Makefile
 ├── README.md
+├── Testing.ipynb
 ├── data
-│   ├── external
-│   ├── internal
-│   ├── processed
-│   └── raw
-│       ├── test_features.csv
-│       ├── testing.csv
-│       ├── train_features.csv
-│       └── train_salaries.csv
+│   ├── external
+│   ├── internal
+│   ├── processed
+│   │   └── processed.csv
+│   └── raw
+│       ├── test_features.csv
+│       ├── testing.csv
+│       ├── train_features.csv
+│       └── train_salaries.csv
 ├── docs
-│   ├── Makefile
-│   ├── commands.rst
-│   ├── conf.py
-│   ├── getting-started.rst
-│   ├── index.rst
-│   └── make.bat
+│   ├── Makefile
+│   ├── commands.rst
+│   ├── conf.py
+│   ├── getting-started.rst
+│   ├── index.rst
+│   └── make.bat
 ├── main.py
 ├── models
 ├── notebooks
-│   └── Modeling.ipynb
+│   ├── EDA.ipynb
+│   └── Modeling.ipynb
 ├── references
 ├── reports
-│   └── figures
+│   └── figures
 ├── requirements.txt
 ├── setup.py
 ├── src
-│   ├── __init__.py
-│   ├── data
-│   │   ├── __init__.py
-│   │   └── make_dataset.py
-│   ├── features
-│   │   ├── __init__.py
-│   │   └── build_features.py
-│   ├── models
-│   │   ├── __init__.py
-│   │   ├── predict_model.py
-│   │   └── train_model.py
-│   ├── preprocessing.py
-│   └── visualization
-│       ├── __init__.py
-│       └── visualize.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-37.pyc
+│   │   └── preprocessing.cpython-37.pyc
+│   ├── data
+│   │   ├── __init__.py
+│   │   └── make_dataset.py
+│   ├── features
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-37.pyc
+│   │   │   └── build_features.cpython-37.pyc
+│   │   └── build_features.py
+│   ├── models
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-37.pyc
+│   │   │   ├── predict_model.cpython-37.pyc
+│   │   │   └── predict_model_test.cpython-37.pyc
+│   │   ├── predict_model.py
+│   │   ├── predict_model_test.py
+│   │   └── train_model.py
+│   ├── preprocessing.py
+│   └── visualization
+│       ├── __init__.py
+│       └── visualize.py
 ├── test_environment.py
 └── tox.ini
 ```
