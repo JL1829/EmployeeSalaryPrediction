@@ -30,7 +30,7 @@ class ModelGenerator(object):
     def add_model(self, model):
         self.models.append(model)
 
-    def cross_validate(self, k=5, num_procs=4):
+    def cross_validate(self, k=5, num_procs=-1):
         '''cross validate models using given data'''
         feature_df = self.data.train_df[self.data.feature_cols]
         target_df = self.data.train_df[self.data.target_col]

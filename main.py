@@ -51,7 +51,7 @@ if __name__ == "__main__":
         feature_generator = build_features.FeatureGenerator(data)
         feature_generator.add_group_stats()
     
-    models = predict_model.ModelGenerator()
+    models = predict_model.ModelGenerator(models=[], data=data)
 
     models.add_model(LinearRegression())
     models.add_model(RandomForestRegressor(n_estimators=100, n_jobs=-1, max_depth=15, min_samples_split=80,
@@ -65,4 +65,15 @@ if __name__ == "__main__":
     models.best_model_fit(data.train_df[data.feature_cols], data.train_df[data.target_col])
     models.best_model_predict(data.test_df[data.feature_cols])
 
-    models.print_summary()
+def print_summary(models):
+    '''prints summary of models, best model, and feature importance'''
+    print('\nModel Summaries:\n')
+    for model in models.mean_mse:
+        print('\n', model, '- MSE:', models.mean_mse[model])
+    print('\nBest Model:\n', models.best_model)
+    print('\nMSE of Best Model\n', models.mean_mse[models.best_model])
+    print('\nFeature Importances\n', models.get_feature_importance(models.best_model, data.feature_cols))
+
+    feature_importances = models.get_feature_importance(models.best_model, data.feature_cols)
+    feature_importances.plot.bar()
+    plt.show()    

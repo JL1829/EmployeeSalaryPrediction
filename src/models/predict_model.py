@@ -67,16 +67,4 @@ class ModelGenerator(object):
         else:
             #some models don't have feature_importances_
             return "Feature importances do not exist for given model"
-
-    def print_summary(self):
-        '''prints summary of models, best model, and feature importance'''
-        print('\nModel Summaries:\n')
-        for model in self.models.mean_mse:
-            print('\n', model, '- MSE:', self.models.mean_mse[model])
-        print('\nBest Model:\n', self.models.best_model)
-        print('\nMSE of Best Model\n', self.models.mean_mse[self.models.best_model])
-        print('\nFeature Importances\n', self.models.get_feature_importance(self.models.best_model, self.data.feature_cols))
-
-        feature_importances = self.get_feature_importance(self.models.best_model, self.data.feature_cols)
-        feature_importances.plot.bar()
-        plt.show()
+            
