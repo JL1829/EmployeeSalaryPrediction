@@ -32,12 +32,12 @@ from src.features import build_features
 from src.models import predict_model
 
 if __name__ == "__main__":
-    #define input files
+    # define input files
     train_feature_file = 'data/raw/train_features.csv'
     train_target_file = 'data/raw/train_salaries.csv'
     test_file = 'data/raw/test_features.csv'
 
-    #define variables
+    # define variables
     cat_cols = ['companyId', 'jobType', 'degree', 'major', 'industry']
     num_cols = ['yearsExperience', 'milesFromMetropolis']
     target_col = 'salary'
@@ -63,6 +63,6 @@ if __name__ == "__main__":
     models.select_best_model()
 
     models.best_model_fit(data.train_df[data.feature_cols], data.train_df[data.target_col])
-    models.best_mode_predict(data.test_df[data.feature_cols])
+    models.best_model_predict(data.test_df[data.feature_cols])
 
     models.print_summary()

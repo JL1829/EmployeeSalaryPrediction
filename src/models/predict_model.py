@@ -2,7 +2,7 @@
 #                                                 #
 #                                                 #
 # Author: Johnny Lu                               #
-# Date: 6th/July/2020                             #    
+# Date: 6th/July/2020                             #
 # Copyright: Johnny Lu, 2020                      #
 # email: johnnylou89@icloud.com                   #
 # website: https://johdev.com                     #
@@ -18,9 +18,10 @@ import matplotlib.pyplot as plt
 class ModelGenerator(object):
     """Doc Strings goes here"""
 
-    def __init__(self, models=[]):#, default_num_iters=10, verbose_lvl=0):
+    def __init__(self, models, data):#, default_num_iters=10, verbose_lvl=0):
         '''initializes model list and dicts'''
-        self.models = models
+        self.models = list(models)
+        self.data = data
         self.best_model = None
         self.predictions = None
         self.mean_mse = {}
@@ -30,13 +31,13 @@ class ModelGenerator(object):
     def add_model(self, model):
         self.models.append(model)
 
-    def cross_validate(self, data, k=3, num_procs=1):
+    def cross_validate(self, k=5, num_procs=-1):
         '''cross validate models using given data'''
-        feature_df = data.train_df[data.feature_cols]
-        target_df = data.train_df[data.target_col]
+        feature_df = self.data.train_df[self.data.feature_cols]
+        target_df = self.data.train_df[self.data.target_col]
         for model in self.models:
             neg_mse = cross_val_score(model, feature_df, target_df, cv=k, n_jobs=num_procs, scoring='neg_mean_squared_error')
-            self.mean_mse[model] = -1.0*np.mean(neg_mse)
+            self.mean_mse[model] = -1.0 * np.mean(neg_mse)
     
     def select_best_model(self):
         '''select model with lowest mse'''
@@ -70,12 +71,12 @@ class ModelGenerator(object):
     def print_summary(self):
         '''prints summary of models, best model, and feature importance'''
         print('\nModel Summaries:\n')
-        for model in models.mean_mse:
-            print('\n', model, '- MSE:', models.mean_mse[model])
-        print('\nBest Model:\n', models.best_model)
-        print('\nMSE of Best Model\n', models.mean_mse[models.best_model])
-        print('\nFeature Importances\n', models.get_feature_importance(models.best_model, data.feature_cols))
+        for model in self.models.mean_mse:
+            print('\n', model, '- MSE:', self.models.mean_mse[model])
+        print('\nBest Model:\n', self.models.best_model)
+        print('\nMSE of Best Model\n', self.models.mean_mse[self.models.best_model])
+        print('\nFeature Importances\n', self.models.get_feature_importance(self.models.best_model, self.data.feature_cols))
 
-        feature_importances = self.get_feature_importance(models.best_model, data.feature_cols)
+        feature_importances = self.get_feature_importance(self.models.best_model, self.data.feature_cols)
         feature_importances.plot.bar()
         plt.show()

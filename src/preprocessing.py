@@ -16,6 +16,7 @@ import numpy as np
 from sklearn.utils import shuffle
 from sklearn.preprocessing import LabelEncoder
 
+
 class DataSetGenerator(object):
     """Doc Strings goes here"""
 
@@ -50,7 +51,7 @@ class DataSetGenerator(object):
             self.label_encode_df(train_df, self.cat_cols)
         
         return train_df
-    
+  
     def _create_test_df(self, test_file, label_encode=True):
         """loads and label encodes test data"""
         test_df = self._loadData(test_file)
@@ -83,7 +84,7 @@ class DataSetGenerator(object):
                 self._label_encode(df, col, self.label_encoders[col])
             else:
                 self._label_encode(df, col)
-    
+   
     def _label_encode(self, df, col, le=None):
         """label encodes data"""
         if le:
@@ -93,4 +94,3 @@ class DataSetGenerator(object):
             le.fit(df[col])
             df[col] = le.transform(df[col])
             self.label_encoders[col] = le
-    
