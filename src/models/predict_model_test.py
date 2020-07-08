@@ -15,6 +15,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import cross_val_score
 import matplotlib.pyplot as plt
+from sklearn.model_selection import KFold
 
 
 class ModelGenerator(object):
@@ -30,10 +31,11 @@ class ModelGenerator(object):
     def add_model(self, model):
         self.models.append(model)
 
-    def cross_validate(self, k=5, num_procs=-1):
+    def cross_validate(self, num_procs=-1):
         '''cross validate models using given data'''
         feature_df = self.data.train_df[self.data.feature_cols]
         target_df = self.data.train_df[self.data.target_col]
+        cv = KFold()
         for model in self.models:
-            neg_mse = cross_val_score(model, feature_df, target_df, cv=k, n_jobs=num_procs, scoring='neg_mean_squared_error')
+            neg_mse = cross_val_score(model, feature_df, target_df, cv=cv, n_jobs=num_procs, scoring='neg_mean_squared_error')
             self.mean_mse[model] = -1.0 * np.mean(neg_mse)
