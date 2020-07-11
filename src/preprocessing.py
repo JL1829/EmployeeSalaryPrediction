@@ -1,14 +1,10 @@
-###################################################
-#                                                 #
-#                                                 #
-# Author: Johnny Lu                               #
-# Date: 6th/July/2020                             #    
-# Copyright: Johnny Lu, 2020                      #
-# email: johnnylou89@icloud.com                   #
-# website: https://johdev.com                     #
-#                                                 #
-#                                                 #
-###################################################
+"""
+Author: Johnny Lu
+Date: 6th/July/2020   
+Copyright: Johnny Lu, 2020
+email: joh@johdev.com
+website: https://johdev.com
+"""
 
 
 import pandas as pd
