@@ -1,3 +1,8 @@
+[//]: # (BADGES SECTION: change `jl1829` with your GitHub username and `EmployeeSalaryPrediction` with the name of your repo)
+![GitHub](https://img.shields.io/github/license/jl1829/EmployeeSalaryPrediction)
+
+[//]: # (END OF BADGES SECTION)
+
 EmployeeSalaryPrediction
 ==============================
 
