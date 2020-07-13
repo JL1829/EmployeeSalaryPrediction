@@ -1,6 +1,6 @@
 [//]: # (BADGES SECTION: change `jl1829` with your GitHub username and `EmployeeSalaryPrediction` with the name of your repo)
 ![GitHub](https://img.shields.io/github/license/jl1829/EmployeeSalaryPrediction)
-
+[![Python 3.7](https://img.shields.io/badge/python-3.7.7-blue.svg)](https://www.python.org/downloads/release/python-377/)
 [//]: # (END OF BADGES SECTION)
 
 EmployeeSalaryPrediction
