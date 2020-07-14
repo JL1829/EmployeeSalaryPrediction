@@ -5,9 +5,22 @@
 EmployeeSalaryPrediction
 ==============================
 
+# About
 A short description of the project.
 
-Project Organization
+
+## Contents
+
+1. [PlaceHolder](#1-ContentsHolderOne)
+2. [PlaceHolder2](#2How-to-Start)
+
+## ContentsHolderOne
+
+## How to Start
+placeholder
+
+
+## Project Organization
 ------------
 ```bash
 ├── LICENSE
@@ -43,9 +56,6 @@ Project Organization
 ├── setup.py
 ├── src
 │   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-37.pyc
-│   │   └── preprocessing.cpython-37.pyc
 │   ├── data
 │   │   ├── __init__.py
 │   │   └── make_dataset.py
@@ -75,4 +85,4 @@ Project Organization
 
 --------
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a></small></p>

@@ -44,6 +44,8 @@ def print_summary(models, data):
 def main(train_feature_file:str, 
          train_target_file:str, test_file:str, 
          cat_cols:list, num_cols:list, target_col:str, id_col:str):
+    
+    print("Now start accessing data and preprocess it. \n")
     data = DataSetGenerator(train_feature_file, train_target_file, test_file, cat_cols, num_cols, target_col, id_col)
     
     feature_engineering = True
