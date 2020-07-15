@@ -12,7 +12,66 @@ from sklearn.model_selection import cross_val_score
 import matplotlib.pyplot as plt
 
 class ModelGenerator(object):
-    """Doc Strings goes here"""
+    """A General Model Generator Class to perform following opreation:
+        * Add Model as a list into the Generator.
+        * Perform Cross Validation process to calculate the MSE(Mean Square Error).
+        * Select the model from the list which perform the best MSE result. 
+        * Perform the prediction for the test data based on the best performance model. 
+        
+        Parameters
+        ----------------
+        - models: List, a list to accept Model instance from Scikit-Learn. 
+        - data: Class, a data preprocessing class from `preprocessing.py`
+        - best_model = None
+        - predictions = None
+        - mean_mse = {}
+        
+        Method
+        ----------------
+        add_model(self, model): 
+           - Append the new model instance from scikit-learn into `models` list
+        
+        cross_validate(self, k=5, n_proces=-1):
+           - Perform Cross Validation on the `models` list's model based on `data` class, 
+             in default 5 folds Cross Validation, and default `-1` n_jobs
+           - return the `mean_mse` dict with model name and MES
+        
+        select_best_model(self):
+           - select the model with lowest MES value.
+           - return `best_model` 
+        
+        best_model_fit(self, features, targets):
+           - Train the best model from `best_model`
+        
+        best_model_predict(self, features):
+           - make prediction on test set
+           - return `predictions`
+        
+        save_results(self):
+           - save the best performance model in `.pkl` file in ./models folder
+        
+        Static Method
+        ----------------
+        get_feature_importance(models, col):
+           - determine whether the particular model have `feature_importances_` attribute
+             if yes, print out the `feature_importances_`
+        
+        Examples
+        ----------------
+        >>> from src.preprocessing import DataSetGenerator
+        >>> from src.features.build_features import FeatureGenerator
+        >>> from src.models.predict_model import ModelGenerator
+        >>> data = DataSetGenerator(train_feature_file, train_target_file, test_file, cat_cols, num_cols, target_col, id_col)
+        >>> models = ModelGenerator(models=[], data=data)
+        >>> models.add_model(LinearRegression())
+        >>> models.add_model(RandomForestRegressor(n_estimators=100, n_jobs=-1, max_depth=15, min_samples_split=80,
+                                           max_features=8))
+        >>> models.cross_validate()
+        >>> models.select_best_model()
+        >>> models.best_model_fit(...)
+        >>> models.best_model_predict(...)
+        >>> models.get_feature_importance(...)
+        >>> models.save_results('model.pkl')"""
 
     def __init__(self, models, data):#, default_num_iters=10, verbose_lvl=0):
         '''initializes model list and dicts'''
