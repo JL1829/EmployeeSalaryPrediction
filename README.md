@@ -8,17 +8,21 @@ EmployeeSalaryPrediction
 
 
 # About
-A short description of the project.
+Can you provide a predictive indication of a candidate's salary level, based on their previous job description mata data? The Employee Salary Prediction is a sub project for a complex HR system to evaluate the candidate's expected salary level, based on the actual job meta data and salary mapping dataset. 
 
 
 ## Contents
 
-1. [PlaceHolder](#1-ContentsHolderOne)
-2. [PlaceHolder2](#2-How-to-Start)
+1. [Origin Business Problem](#1-Origin-Business-Problem)
+2. [Dataset description](#2-Dataset-description)
+3. [How to Start](#3-How-to-start)
+4. [Exploration Notebook](#4-Exploration-Notebook)
+5. [Project Organization](#5-Project-Organization)
 
-## ContentsHolderOne
+### Origin Business Problem
+Customer is a large recruiting firm have more than millions record of the candidates and tens of thousand of reviews from the candidates to each particular companys and the companys to candidates. Cusomter was frustrated about the miss match of the salary expectation from both company and candidate, but they managed to dig out the pass record of success recruiting case, based on this situation, customer want to develop a predictive salary indication measurement to improve the expectation of both candidate and companys. 
 
-## Data Supplied
+### Dataset description
 
 There's 3 CSV data files given:
 
@@ -30,12 +34,21 @@ The first row of each file contains headers for the columns. Keep in mind that t
 
 
 ## How to Start
-placeholder
+
+```bash
+> git clone https://github.com/JL1829/EmployeeSalaryPrediction.git
+> cd EmployeeSalaryPrediction
+> pip3 install -r requirement.txt
+> python3 main.py
+```
+
+## Exploration Notebook
 
 
 ## Project Organization
 ------------
 ```bash
+.
 ├── LICENSE
 ├── Makefile
 ├── README.md
@@ -57,6 +70,9 @@ placeholder
 │   ├── getting-started.rst
 │   ├── index.rst
 │   └── make.bat
+├── imgs
+│   ├── job-search.png
+│   └── sample.png
 ├── main.py
 ├── models
 ├── notebooks
@@ -74,28 +90,21 @@ placeholder
 │   │   └── make_dataset.py
 │   ├── features
 │   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-37.pyc
-│   │   │   └── build_features.cpython-37.pyc
 │   │   └── build_features.py
 │   ├── models
 │   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-37.pyc
-│   │   │   ├── predict_model.cpython-37.pyc
-│   │   │   └── predict_model_test.cpython-37.pyc
 │   │   ├── predict_model.py
 │   │   ├── predict_model_test.py
 │   │   └── train_model.py
 │   ├── preprocessing.py
 │   └── visualization
 │       ├── __init__.py
-│       └── visualize.py
+│       ├── visualize.py
+│       └── visuzlize_Testing.py
 ├── test_environment.py
 └── tox.ini
 ```
 
-
---------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a></small></p>
+## To Do:
+- Streamlit Web App
+- Put it online
