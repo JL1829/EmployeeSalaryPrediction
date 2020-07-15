@@ -4,6 +4,8 @@
 
 EmployeeSalaryPrediction
 ==============================
+![image](https://raw.githubusercontent.com/JL1829/EmployeeSalaryPrediction/master/imgs/job-search.png)
+
 
 # About
 A short description of the project.
