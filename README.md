@@ -12,9 +12,20 @@ A short description of the project.
 ## Contents
 
 1. [PlaceHolder](#1-ContentsHolderOne)
-2. [PlaceHolder2](#2How-to-Start)
+2. [PlaceHolder2](#2-How-to-Start)
 
 ## ContentsHolderOne
+
+## Data Supplied
+
+There's 3 CSV data files given:
+
+* `train_features.csv` : Each row represents metadata for an individual job posting. The “jobId” column represents a unique identifier for the job posting. The remaining columns describe features of the job posting.
+* `train_salaries.csv`: Each row associates a “jobId” with a “salary”.
+* `test_features.csv`: Similar to `train_features.csv`, each row represents metadata for an individual job posting.
+
+The first row of each file contains headers for the columns. Keep in mind that the metadata and salary data may contain errors.
+
 
 ## How to Start
 placeholder

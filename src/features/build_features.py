@@ -10,7 +10,36 @@ import numpy as np
 import pandas as pd
 
 class FeatureGenerator(object):
-    """Doc String goes here"""
+    """A feature engineering generator to create additional feature to DataFrame
+    
+    Group by each label encoded column, compute the:
+        * mean
+        * max
+        * min
+        * Standard Deviation
+        * median
+        of label column
+    
+    Parameter
+    -------------
+    data: object, a dataset object created by `preprocessing.py`
+    
+
+    Method
+    -------------
+    add_group_stats(self):
+        group by each label encoded column, and compute the Grouped Statitics. 
+        fill any NaN value with 0
+
+        Return: grouped by statitics DataFrame merged with original DataFrame.
+    
+
+    Example
+    -------------
+    >>> feature_engineering = True
+    >>> if feature_engineering:
+            FeatureGenerator(data).add_group_stats()
+    """
 
     def __init__(self, data:object):
         """initializes class and creates groupby object for data"""
@@ -28,17 +57,17 @@ class FeatureGenerator(object):
         self.data.test_df = self._merge_new_cols(self.data.test_df, group_stats_df, self.cat_cols, fillna=True)
 
         # update column list
-        group_stats_cols = ['group_mean', 'group_max', 'group_min', 'group_std', 'group_median']
+        group_stats_cols = ['group_mean_salary', 'group_max_salary', 'group_min_salary', 'group_std_salary', 'group_median_salary']
         self._extend_col_lists(self.data, cat_cols=group_stats_cols)
     
     def _get_group_stats(self):
         """calculate group statistics"""
         target_col = self.data.target_col
-        group_stats_df = pd.DataFrame({'group_mean': self.groups[target_col].mean()})
-        group_stats_df['group_max'] = self.groups[target_col].max()
-        group_stats_df['group_min'] = self.groups[target_col].min()
-        group_stats_df['group_std'] = self.groups[target_col].std()
-        group_stats_df['group_median'] = self.groups[target_col].median()
+        group_stats_df = pd.DataFrame({'group_mean_salary': self.groups[target_col].mean()})
+        group_stats_df['group_max_salary'] = self.groups[target_col].max()
+        group_stats_df['group_min_salary'] = self.groups[target_col].min()
+        group_stats_df['group_std_salary'] = self.groups[target_col].std()
+        group_stats_df['group_median_salary'] = self.groups[target_col].median()
 
         return group_stats_df
     

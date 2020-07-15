@@ -14,7 +14,61 @@ from sklearn.preprocessing import LabelEncoder
 
 
 class DataSetGenerator(object):
-    """Doc Strings goes here"""
+    """A Data Set Generator/Processor to perform the basic DataFrame operation:
+    * Create Pandas DataFrame from files or URLs
+    * Merge DataFrames if Features and Target label are sepreated file.
+    * Catagorical Feature encoding
+    * Data Cleaning (remove duplicate, remove outliers, imputation(planed))
+    
+    
+    Parameter
+    ------------
+    - train_feature_file: Type: str, file path or URLs
+    - train_target_file: Type: str, file path or URLs
+    - test_file: Type: str, file path or URLs
+    - cat_cols: Type: List, name list of categorical columns
+    - num_cols: Type: List, name list of numerical columns
+    - target_col: Type: str or List, the name of Target Label column
+    - index_col: Type: str, the name of index column
+    
+
+    Attributes:
+    ------------
+    train_df: 
+        A well preprocessed Pandas DataFrame contain features and label columns
+    
+    test_df:
+        A well label encoded Pandas DataFrame contain feature columns only
+
+    label_encoders: 
+        dict, key: column name, value: LabelEncoder()
+
+
+    Method
+    ------------
+    - label_encode_df(self, df, col):
+        Label encoder for df and col, it will search whether the Label Encoder instance 
+        already exist, it not, create Label Encoder instance for particular column
+        and perform label encoding. 
+    
+    
+    Example
+    ------------
+    >>> data = DataSetGenerator(train_feature_file, train_target_file, 
+                            test_file, cat_cols, num_cols, target_col, id_col)
+    
+    >>> data.train_df
+         ### DataFrame ###
+    
+    >>> data.test_df
+         ### DataFrame### 
+    
+    >>> data.feature_cols
+         ### feature columns shows here
+    
+    >>> data.label_encoders
+         ### print out label encoder dict"""
+    
 
     def __init__(self, 
                  train_feature_file, 
