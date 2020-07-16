@@ -10,19 +10,24 @@ EmployeeSalaryPrediction
 # About
 Can you provide a predictive indication of a candidate's salary level, based on their previous job description mata data? The Employee Salary Prediction is a sub project for a complex HR system to evaluate the candidate's expected salary level, based on the actual job meta data and salary mapping dataset. 
 
+Table of Contents
+=================
 
-## Contents
+   * [EmployeeSalaryPrediction](#employeesalaryprediction)
+   * [About](#about)
+   * [Table of Contents](#table-of-contents)
+      * [Origin Business Problem](#origin-business-problem)
+      * [Dataset description](#dataset-description)
+      * [How to Start](#how-to-start)
+      * [Exploration Notebook](#exploration-notebook)
+      * [Project Organization](#project-organization)
+      * [To Do:](#to-do)
 
-1. [Origin Business Problem](#1-Origin-Business-Problem)
-2. [Dataset description](#2-Dataset-description)
-3. [How to Start](#3-How-to-start)
-4. [Exploration Notebook](#4-Exploration-Notebook)
-5. [Project Organization](#5-Project-Organization)
 
-### Origin Business Problem
+## Origin Business Problem
 Customer is a large recruiting firm have more than millions record of the candidates and tens of thousand of reviews from the candidates to each particular companys and the companys to candidates. Cusomter was frustrated about the miss match of the salary expectation from both company and candidate, but they managed to dig out the pass record of success recruiting case, based on this situation, customer want to develop a predictive salary indication measurement to improve the expectation of both candidate and companys. 
 
-### Dataset description
+## Dataset description
 
 There's 3 CSV data files given:
 
