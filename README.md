@@ -15,13 +15,12 @@ Table of Contents
 
    * [EmployeeSalaryPrediction](#employeesalaryprediction)
    * [About](#about)
-   * [Table of Contents](#table-of-contents)
-      * [Origin Business Problem](#origin-business-problem)
-      * [Dataset description](#dataset-description)
-      * [How to Start](#how-to-start)
-      * [Exploration Notebook](#exploration-notebook)
-      * [Project Organization](#project-organization)
-      * [To Do:](#to-do)
+   * [Origin Business Problem](#origin-business-problem)
+   * [Dataset description](#dataset-description)
+   * [How to Start](#how-to-start)
+   * [Exploration Notebook](#exploration-notebook)
+   * [Project Organization](#project-organization)
+   * [To Do:](#to-do)
 
 
 ## Origin Business Problem
@@ -40,6 +39,7 @@ The first row of each file contains headers for the columns. Keep in mind that t
 
 ## How to Start
 
+To start from the source code directly, please follow the steps:
 ```bash
 > git clone https://github.com/JL1829/EmployeeSalaryPrediction.git
 > cd EmployeeSalaryPrediction
@@ -49,6 +49,9 @@ The first row of each file contains headers for the columns. Keep in mind that t
 
 ## Exploration Notebook
 
+We have prepared two Jupyter Notebook for the problem exploration: 
+- [Exploratory Data Analysis(EDA)](https://github.com/JL1829/EmployeeSalaryPrediction/blob/master/notebooks/EDA.ipynb)
+- [Machine Learning Modeling](https://github.com/JL1829/EmployeeSalaryPrediction/blob/master/notebooks/Modeling.ipynb)
 
 ## Project Organization
 ------------
