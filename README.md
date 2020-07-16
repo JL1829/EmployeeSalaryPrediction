@@ -6,14 +6,9 @@ EmployeeSalaryPrediction
 ==============================
 ![image](https://raw.githubusercontent.com/JL1829/EmployeeSalaryPrediction/master/imgs/job-search.png)
 
-
-# About
-Can you provide a predictive indication of a candidate's salary level, based on their previous job description mata data? The Employee Salary Prediction is a sub project for a complex HR system to evaluate the candidate's expected salary level, based on the actual job meta data and salary mapping dataset. 
-
 Table of Contents
 =================
 
-   * [EmployeeSalaryPrediction](#employeesalaryprediction)
    * [About](#about)
    * [Origin Business Problem](#origin-business-problem)
    * [Dataset description](#dataset-description)
@@ -21,6 +16,9 @@ Table of Contents
    * [Exploration Notebook](#exploration-notebook)
    * [Project Organization](#project-organization)
    * [To Do:](#to-do)
+
+# About
+Can you provide a predictive indication of a candidate's salary level, based on their previous job description mata data? The Employee Salary Prediction is a sub project for a complex HR system to evaluate the candidate's expected salary level, based on the actual job meta data and salary mapping dataset. 
 
 
 ## Origin Business Problem
