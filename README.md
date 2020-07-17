@@ -1,6 +1,6 @@
 [![author](https://img.shields.io/badge/author-JohnnyLu-red.svg)](https://www.linkedin.com/in/jl1829/)
 ![GitHub](https://img.shields.io/github/license/jl1829/EmployeeSalaryPrediction)
-[![Python 3.7](https://img.shields.io/badge/python-3.7.7-blue.svg)](https://www.python.org/downloads/release/python-377/)
+[![Python 3.7](https://img.shields.io/badge/python-3.7.6-blue.svg)](https://www.python.org/downloads/release/python-376/)
 
 EmployeeSalaryPrediction
 ==============================
