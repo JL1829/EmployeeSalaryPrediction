@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import cross_val_score
 import matplotlib.pyplot as plt
+import joblib
 
 class ModelGenerator(object):
     """A General Model Generator Class to perform following opreation:
@@ -48,7 +49,7 @@ class ModelGenerator(object):
            - return `predictions`
         
         save_results(self):
-           - save the best performance model in `.pkl` file in ./models folder
+           - save the best performance model in `.joblib` file in ./models folder
         
         Static Method
         ----------------
@@ -107,7 +108,7 @@ class ModelGenerator(object):
         self.predictions = self.best_model.predict(features)
         
     def save_results(self):
-        pass
+        joblib.dump(self.best_model, '../../model/best_model.joblib')
     
     @staticmethod
     def get_feature_importance(model, cols):
