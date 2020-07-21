@@ -50,6 +50,7 @@ To start from the source code directly, please follow the steps:
 We have prepared two Jupyter Notebook for the problem exploration: 
 - [Exploratory Data Analysis(EDA)](https://github.com/JL1829/EmployeeSalaryPrediction/blob/master/notebooks/EDA.ipynb)
 - [Machine Learning Modeling](https://github.com/JL1829/EmployeeSalaryPrediction/blob/master/notebooks/Modeling.ipynb)
+- [Hyperparameter Fine Turning]()
 
 ## Project Organization
 ------------
@@ -84,6 +85,7 @@ We have prepared two Jupyter Notebook for the problem exploration:
 ├── notebooks
 │   ├── EDA.ipynb
 │   └── Modeling.ipynb
+|   |-- HyperparameterTurning.ipynb
 ├── references
 ├── reports
 │   └── figures
