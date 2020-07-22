@@ -15,9 +15,6 @@ from sklearn.utils import shuffle
 from sklearn.metrics import mean_squared_error
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import LabelEncoder
-from sklearn.pipeline import make_pipeline
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
 from xgboost import XGBRegressor
 from lightgbm import LGBMRegressor
 

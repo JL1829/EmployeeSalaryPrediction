@@ -34,6 +34,15 @@ There's 3 CSV data files given:
 
 The first row of each file contains headers for the columns. Keep in mind that the metadata and salary data may contain errors.
 
+Features at a glance: 
+ - `jobId`: `str`, an unique identification for a job record in database
+ - `companyId`: `str`, an unique idenficiation for a company
+ - `jobType`: `str`, Categorical feature, including: `janitor`, `junior`, `senior`, `manager`, `VICE_PRESIDENT`, `CFO`, `CTO`, `CEO`.
+ - `degree`: `str`, Categorical feature, including: `None`, `HIGH_SCHOOL`, `BACHELORS`, `MASTER`, `DOCTORAL`. 
+ - `major`: `str`, Categorical feature, including: `None`, `Literature`, `Biology`, `Chemistry`, `Physics`, `ComSci`, `Math`, `Business`, `Engineering`.
+ - `Industry`: `str`, Categorical feature, including: `Education`, `Service`, `Auto`, `Health`, `Web`, `Finance`, `Oil`.
+ - `yearsExperience`: `int64`, numerical feature, a record of a candidate have how many years of experiences. 
+ - `milesFromMetropolis`: `int64`, numerical feature, a record of the distance of candidate's living place to metropolis. 
 
 ## How to Start
 
