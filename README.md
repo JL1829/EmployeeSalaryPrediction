@@ -22,7 +22,7 @@ Can you provide a predictive indication of a candidate's salary level, based on 
 
 
 ## Origin Business Problem
-Customer is a large recruiting firm have more than millions record of the candidates and tens of thousand of reviews from the candidates to each particular companys and the companys to candidates. Cusomter was frustrated about the miss match of the salary expectation from both company and candidate, but they managed to dig out the pass record of success recruiting case, based on this situation, customer want to develop a predictive salary indication measurement to improve the expectation of both candidate and companys. 
+Customer is a large recruiting firm have more than millions record of the candidates and tens of thousand of reviews from the candidates to each particular companies and the companies to candidates. Cusomter was frustrated about the miss match of the salary expectation from both company and candidate, but they managed to dig out the pass record of success recruiting case, based on this situation, customer want to develop a predictive salary indication measurement to improve the expectation of both candidate and companies. 
 
 ## Dataset description
 
